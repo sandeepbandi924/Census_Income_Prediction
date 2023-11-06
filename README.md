@@ -20,7 +20,7 @@
    * This pipeline converts given data into dataframe and has various functions to load pickle files and predict the final results in python.
 
 5. Flask App creation :
-   * Flask app is created with User Interface to predict the Census Income price wheather <=50K or >=50K inside a Web Application.
+   * Flask app is created with User Interface to predict the Census Income price wheather <=50K or >50K inside a Web Application.
 
 # EDA Notebbok:
 
