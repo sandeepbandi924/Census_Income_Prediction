@@ -1,6 +1,6 @@
-## END to End Census Income Predcition
+# END to End Census Income Predcition
 
-# Approach of the project
+## Approach of the project
 
 1. Data Ingestion :
    * In Data Ingestion phase the data is first read as csv.
