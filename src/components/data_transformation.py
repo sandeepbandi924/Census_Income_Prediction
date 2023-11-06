@@ -26,10 +26,10 @@ class DataTransformation:
          logging.info('Data Transformation initiated')
 
          #segregating cat and num columns
-         categorical_cols = ['workclass','education','marital.status','occupation'
-                             ,'relationship','race','sex','native.country']
-         numerical_cols = ['age','education.num','capital.gain',
-                           'hours.per.week']
+         categorical_cols = ['workclass','education','marital_status','occupation'
+                             ,'relationship','race','sex']
+         numerical_cols = ['age','education_num','capital_gain',
+                           'hours_per_week']
          
          logging.info('Pipeline Initiated')
          #Numerical Pipeline
@@ -88,7 +88,7 @@ class DataTransformation:
          preprocessor_obj = self.get_data_transformation_object()
 
          target_column = 'income'
-         drop_columns = [target_column,'fnlwgt','capital.loss']
+         drop_columns = [target_column,'fnlwgt','capital_loss','native_country']
 
          input_feature_train_df = train_df.drop(columns=drop_columns,axis=1)
          target_feature_train_df = train_df[target_column]

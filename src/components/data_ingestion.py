@@ -55,10 +55,3 @@ class DataIngestion:
          logging.info('EException Occured at Data Ingestion Stage')
          raise CustomException(e,sys)
       
-if __name__ == '__main__':
-   dataingestion = DataIngestion()
-   train_data,test_data = dataingestion.initiate_data_ingestion()
-   datatransformation = DataTransformation()
-   train_array,test_array,_ = datatransformation.initiate_data_transformation(train_data,test_data)
-   model_trainer = ModelTrainer()
-   model_trainer.initiate_model_trainer(train_array,test_array)
