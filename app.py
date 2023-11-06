@@ -28,8 +28,7 @@ def predict_datapoint():
       sex=request.form.get('sex')
       )
 
-      
-
+   
       final_new_data = data.get_data_as_dataframe()
       predict_pipeline = PredictionPipeline()
       pred = predict_pipeline.predict(final_new_data)
