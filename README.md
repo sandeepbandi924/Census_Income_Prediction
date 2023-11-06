@@ -30,6 +30,8 @@ Link: [EDA Notebook](./notebook/EDA.ipynb)
 
 Link: [Model training Notebook](./notebook/model_trainer.ipynb)
 
-# AWS Deployment link:
+# Deployment:
+
+## AWS Deployment link:
 
 AWS ELastic Beanstalk link: [http://censusincome-env.eba-beuv8ifw.ap-south-1.elasticbeanstalk.com/](http://censusincome-env.eba-beuv8ifw.ap-south-1.elasticbeanstalk.com/)
