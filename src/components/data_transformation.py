@@ -73,7 +73,7 @@ class DataTransformation:
          income_map = {'<=50K':0, '>50K':1}
          train_df['salary'] = train_df['salary'].map(income_map)
          test_df['salary'] = test_df['salary'].map(income_map)
-         logging.info('Mapping Target income column')
+         logging.info('Mapping Target salary column')
 
          #replacing '?' with NaN value
          train_df.replace('?',np.nan,inplace=True)
@@ -87,8 +87,8 @@ class DataTransformation:
          logging.info('Obtaining preprocessor object')
          preprocessor_obj = self.get_data_transformation_object()
 
-         target_column = 'income'
-         drop_columns = [target_column,'fnlwgt','capital_loss','native_country']
+         target_column = 'salary'
+         drop_columns = [target_column,'fnlwgt','capital_loss','country']
 
          input_feature_train_df = train_df.drop(columns=drop_columns,axis=1)
          target_feature_train_df = train_df[target_column]

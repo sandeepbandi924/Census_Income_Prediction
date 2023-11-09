@@ -13,7 +13,7 @@
    * This preprocessor is saved as pickle file.
 
 3. Model Training :
-   * In this phase base model is tested . The best model found was Supoort vector classifier.
+   * In this phase base model is tested . The best model found was Logistic Regression.
    * This model is saved as pickle file.
 
 4. Prediction Pipeline :
