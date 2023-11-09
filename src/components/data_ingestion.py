@@ -28,7 +28,7 @@ class DataIngestion:
       try:
           logging.info('Data Ingestion Method starts')
           #Reading dataset
-          df = pd.read_csv('notebook/data/census_income.csv')
+          df = pd.read_csv('notebook/data/adult.csv')
           logging.info('Dataset read as pandas Dataframe')
           #Droping duplicates
           df.drop_duplicates(keep='first',inplace=True)

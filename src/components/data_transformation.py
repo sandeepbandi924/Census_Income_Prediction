@@ -71,8 +71,8 @@ class DataTransformation:
 
          #target income column
          income_map = {'<=50K':0, '>50K':1}
-         train_df['income'] = train_df['income'].map(income_map)
-         test_df['income'] = test_df['income'].map(income_map)
+         train_df['salary'] = train_df['salary'].map(income_map)
+         test_df['salary'] = test_df['salary'].map(income_map)
          logging.info('Mapping Target income column')
 
          #replacing '?' with NaN value
