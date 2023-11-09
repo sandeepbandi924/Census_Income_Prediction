@@ -2,8 +2,7 @@
 
 ## Problem Statement:
 - The Goal is to predict whether a person has an income of more than 50K a year or not.
-- This is basically a binary classification problem where a person is classified into the
-  >50K group or <=50K group.
+- This is basically a binary classification problem where a person is classified into the >50K group or <=50K group.
 
 ## Introduction About the Data
 
@@ -30,6 +29,19 @@ Dataset Source Link : https://archive.ics.uci.edu/ml/datasets/census+income
 
 ## Approach of the project
 
+### EDA and FE Notebook:
+- In EDA, I have created an deep and clean realtions between every column and made some plots using seaborn and matplotlib.
+- In FE, I have handled missing values,created a all categorical to numerical columns.
+
+Link: [EDA Notebook](./notebook/EDA.ipynb)
+
+# Model Traing Approach Notebook:
+- I have trained the model using classification algorithms, the best model found is Logistic Regresssion with 85% accuracy.
+
+Link: [Model training Notebook](./notebook/model_trainer.ipynb)
+
+## Modular Code steps:
+
 1. Data Ingestion :
    * In Data Ingestion phase the data is first read as csv.
    * Then the data is split into training and testing and saved as csv file.
@@ -50,16 +62,50 @@ Dataset Source Link : https://archive.ics.uci.edu/ml/datasets/census+income
 5. Flask App creation :
    * Flask app is created with User Interface to predict the Census Income price wheather <=50K or >50K inside a Web Application.
 
-# EDA Notebbok:
-
-Link: [EDA Notebook](./notebook/EDA.ipynb)
-
-# Model Traing Approach Notebook:
-
-Link: [Model training Notebook](./notebook/model_trainer.ipynb)
-
 # Deployment:
 
-## AWS Deployment link:
-
+## AWS Elastic Beanstalk link:
 AWS ELastic Beanstalk link: [http://censusincome-env.eba-beuv8ifw.ap-south-1.elasticbeanstalk.com/](http://censusincome-env.eba-beuv8ifw.ap-south-1.elasticbeanstalk.com/)
+
+## AWS CI/CD:
+### Docker image + Github action + AWS EC2 + ECR Repo
+
+- steps:
+
+1. Docker Build checked
+2. Github Workflow
+3. Iam User In AWS
+
+- Docker Setup In EC2 commands to be Executed
+
+   #optinal
+
+   sudo apt-get update -y
+
+   sudo apt-get upgrade
+
+
+   #required
+
+   curl -fsSL https://get.docker.com -o get-docker.sh
+
+   sudo sh get-docker.sh
+
+   sudo usermod -aG docker ubuntu
+
+   newgrp docker
+
+
+
+- Configure EC2 as self-hosted runner:
+- Setup github secrets:
+   AWS_ACCESS_KEY_ID=
+
+   AWS_SECRET_ACCESS_KEY=
+
+   AWS_REGION = us-east-1
+
+   AWS_ECR_LOGIN_URI = demo>> 566373416292.dkr.ecr.ap-south-1.amazonaws.com
+
+   ECR_REPOSITORY_NAME = simple-app
+
