@@ -1,4 +1,4 @@
-# END to End Census Income Predcition - Sandeep Bandi
+# END to End Census Income Prediction - Sandeep Bandi
 
 ## Problem Statement:
 - The Goal is to predict whether a person has an income of more than 50K a year or not.
