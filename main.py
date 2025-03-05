@@ -2,7 +2,7 @@ import streamlit as st
 from src.pipeline.prediction_pipeline import CustomData, PredictionPipeline
 
 def main():
-    st.title("Income Prediction App")
+    st.title("Census Income Prediction App")
     st.write("Enter the details below to predict whether the income is above or below 50K.")
 
     # Input fields
